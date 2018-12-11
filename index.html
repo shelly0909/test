@@ -195,9 +195,9 @@
 							<div class="products-tabs" id="preProductList">
 								<!-- tab -->
 								<div id="tab1" class="tab-pane active">
-									<div class="products-slick products-slick01" data-nav="#slick-nav-1">
+									<div class="products-slick" data-nav="#slick-nav-1">
 										<!-- product -->
-										<div class="product product01"  v-for="item in items" :id="item.productId">
+										<div class="product" v-for="item in items" :id="item.productId">
 											<div class="product-img" v-html="item.imgUrl">
 												<div class="product-label">
 													<span class="new">HOT</span>
@@ -260,11 +260,9 @@
 									<div class="products-slick" data-nav="#slick-nav-1">
 										<!-- product -->
 										<div class="product">
-										    <a href="#" data-toggle="modal" data-target="#myModal">
-											   <div class="product-img">
-											      <img src="./img/k01.png" onMouseOver="this.src='./img/helpexpress.png'" onMouseOut="this.src='./img/k01.png'" alt="">
-									          </div>
-											</a>
+											<div class="product-img">
+												<img src="./img/k01.png" alt="">
+											</div>
 											<div class="product-body">
 											    <h4 class="product-price">RMB 1.00   类型 S</h4>
 												<p class="product-time">2018-11-11</p>
@@ -277,11 +275,9 @@
 
 										<!-- product -->
 										<div class="product">
-										    <a href="#" data-toggle="modal" data-target="#myModal">
-											   <div class="product-img">
-											       <img src="./img/k02.png" onMouseOver="this.src='./img/helpexpress.png'" onMouseOut="this.src='./img/k02.png'" alt="">
-										      </div>
-										    </a>
+											<div class="product-img">
+												<img src="./img/k02.png" alt="">
+											</div>
 											<div class="product-body">
 											    <h4 class="product-price">RMB 1.00   类型 S</h4>
 												<p class="product-time">2018-11-11</p>
@@ -295,11 +291,9 @@
 
 										<!-- product -->
 										<div class="product">
-										    <a href="#" data-toggle="modal" data-target="#myModal">
-											   <div class="product-img">
-											      <img src="./img/k03.png" onMouseOver="this.src='./img/helpexpress.png'" onMouseOut="this.src='./img/k03.png'" alt="">
-										       </div>
-										    </a>
+											<div class="product-img">
+												<img src="./img/k03.png" alt="">
+											</div>
 											<div class="product-body">
 											    <h4 class="product-price">RMB 1.00   类型 S</h4>
 												<p class="product-time">2018-11-11</p>
@@ -313,11 +307,9 @@
 
 										<!-- product -->
 										<div class="product">
-										    <a href="#" data-toggle="modal" data-target="#myModal">
-											    <div class="product-img">
-											       <img src="./img/k04.png" onMouseOver="this.src='./img/helpexpress.png'" onMouseOut="this.src='./img/k04.png'" alt="">
-											   </div>
-											</a>
+											<div class="product-img">
+												<img src="./img/k04.png" alt="">
+											</div>
 											<div class="product-body">
 											    <h4 class="product-price">RMB 1.00   类型 S</h4>
 												<p class="product-time">2018-11-11</p>
@@ -365,45 +357,6 @@
 			<!-- /bottom footer -->
 		</footer>
 		<!-- /FOOTER -->
-		
-		<!-- 消息确认模态框（Modal） -->
-        <div class="modal fade myModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	        <div class="modal-dialog">
-	        	<div class="modal-content">
-		           <div class="modal-header myModal-header">
-				        <button type="button" class="close myModal-header-close" data-dismiss="modal" aria-hidden="true">×</button>
-				        <h4 class="modal-title myModal-header-font" id="myModalLabel">取件确认</h4>
-			       </div>
-			       <div class="modal-body myModal-body">你确定帮TA拿这件快递吗?<br>确认后不可更改哦！</div>
-	               <div class="modal-footer myModal-footer">
-				        <button type="button" class="btn btn-default myModal-btn-close" data-dismiss="modal" id="nono">不了不了</button>
-				        <button type="button" class="btn btn-primary myModal-btn-save" data-dismiss="modal" data-toggle="modal" data-target="#myModal-new"id="makesure">非常确定</button>
-		 	       </div>
-		       </div>
-		       <!-- /.modal-content -->
-	         </div>
-	         <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
-      
-        <!-- 取件密码显示模态框（Modal） -->
-        <div class="modal fade myModal" id="myModal-new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	        <div class="modal-dialog">
-	        	<div class="modal-content">
-		           <div class="modal-header myModal-header">
-				        <button type="button" class="close btn-default myModal-header-close" data-dismiss="modal" aria-hidden="true">×</button>
-				        <h4 class="modal-title myModal-header-font" id="myModalLabel">取件密码</h4>
-			       </div>
-			       <div class="modal-body myModal-password">该快递信息为：近邻宝三号柜345号<br> 取件密码为： 898923</div>
-	               <div class="modal-footer myModal-footer">
-				        <button type="button" class="btn btn-primary myModal-btn-save" data-dismiss="modal" id="iknow">我知道了</button>
-		 	       </div>
-		       </div>
-		       <!-- /.modal-content -->
-	         </div>
-	         <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
 		
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>
@@ -464,9 +417,9 @@
 
 			}
 			
-			$(".products-slick01").click(function(e){
+			$(".products-slick").click(function(e){
 				let $target = $(e.target);
-				while(!$target.hasClass("product01")){
+				while(!$target.hasClass("product")){
 					$target = $target.parent();
 				}
 				let productId = $target.attr("id");
